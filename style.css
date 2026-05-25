@@ -424,3 +424,25 @@ h2 {
         grid-row: span 1;
     }
 }
+/* --- PERBAIKAN GALERI UNTUK LAYAR HP --- */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Membuat gambar berbaris satu-satu ke bawah */
+        gap: 15px;                  /* Memberi jarak antar gambar biar tidak menempel */
+    }
+
+    .gallery-item {
+        height: 200px;              /* Mengatur tinggi kotak gambar di HP agar tidak terlalu panjang */
+    }
+
+    .gallery-item.long {
+        height: 250px;              /* Khusus gambar konser dibuat sedikit lebih tinggi */
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;          /* Gambar otomatis terpotong proporsional di tengah tanpa melar */
+        object-position: center;    /* Memastikan objek utama gambar selalu di tengah */
+    }
+}
