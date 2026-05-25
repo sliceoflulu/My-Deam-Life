@@ -1,0 +1,427 @@
+/* ==========================================
+   RESET & VARIABEL WARNA (Palet Beige-Pink-Choco)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-creme: #FDFBF7;
+    --bg-beige: #F5EBE6;
+    --soft-pink: #E8D3C9;
+    --text-dark: #4A3E3D;
+    --text-muted: #8A7A78;
+    --white-glass: rgba(255, 255, 255, 0.45);
+    --glow-color: rgba(232, 211, 201, 0.6);
+}
+
+html {
+    scroll-behavior: smooth; /* Efek smooth scrolling */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-creme);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.text-center {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-tag {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   1. NAVBAR (Aesthetic Glassmorphism)
+   ========================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--white-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   2. HERO SECTION (Pinterest Aesthetic Background)
+   ========================================== */
+.hero-section {
+    height: 100vh;
+    /* Menggunakan background gradasi lembut + overlay gambar estetik */
+    background: linear-gradient(rgba(245, 235, 230, 0.75), rgba(253, 251, 247, 0.85)), 
+                url('asset/qq.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.about-img-box img {
+    width: 100%;
+    max-width: 300px;         /* Mengatur lebar maksimal pasfoto agar tidak terlalu raksasa */
+    height: auto;             /* Membiarkan tinggi menyesuaikan secara otomatis */
+    aspect-ratio: 3 / 4;      /* Mengunci rasio foto tepat 3x4 */
+    object-fit: contain;      /* Menjamin seluruh area foto masuk tanpa terpotong sama sekali */
+    background-color: #fff;   /* Memberikan background putih jika ada sisa ruang */
+    border-radius: 15px;      /* Lengkungan sudut yang lebih rapi untuk pasfoto */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    display: block;
+    margin: 0 auto;           /* Membuat posisi foto otomatis di tengah pada layar kecil */
+}
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-style: italic;
+    animation: fadeInUp 2s ease;
+}
+
+/* BUTTON AESTHETIC */
+.btn-aesthetic {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: var(--text-dark);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded corner aesthetic */
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(74, 62, 61, 0.2);
+}
+
+.btn-aesthetic:hover {
+    background-color: var(--soft-pink);
+    color: var(--text-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--glow-color);
+}
+
+/* ==========================================
+   3. ABOUT ME SECTION
+   ========================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-img-box img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 30px 10px 30px 10px; /* Variasi lekukan estetik */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   4. DREAM BOARD SECTION (Glassmorphism & Hover Effect)
+   ========================================== */
+.dream-section {
+    background-color: var(--bg-beige);
+}
+
+.dream-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.dream-card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-align: center;
+}
+
+.dream-card .card-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.dream-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.dream-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Hover Effect Modern dengan Glow Lembut */
+.dream-card:hover {
+    transform: translateY(-8px);
+    background: #fff;
+    box-shadow: 0 15px 35px var(--glow-color);
+}
+
+/* ==========================================
+   5. EUROPEAN GALLERY SECTION (Grid Modern)
+   ========================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+}
+
+.gallery-item.long {
+    grid-row: span 2; /* Membuat satu foto lebih panjang vertikal ala Pinterest */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Hover Zoom & Overlay */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 62, 61, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-overlay span {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* ==========================================
+   6. QUOTES AESTHETIC SECTION
+   ========================================== */
+.quotes-section {
+    background: linear-gradient(var(--bg-creme), var(--bg-beige));
+    padding: 60px 0;
+    text-align: center;
+}
+
+.quotes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.quote-item p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--text-dark);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   7. MUSIC BUTTON (Floating Layout)
+   ========================================== */
+.music-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white-glass);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: var(--text-dark);
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--soft-pink);
+}
+
+.music-btn.playing {
+    animation: pulse 2s infinite;
+    background-color: var(--soft-pink);
+}
+
+/* ==========================================
+   8. FOOTER
+   ========================================== */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--bg-creme);
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* ==========================================
+   ANIMASI (Fade In & Keyframes)
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(232, 211, 201, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(232, 211, 201, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(232, 211, 201, 0); }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (Mobile Friendly)
+   ========================================== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    .nav-links {
+        display: none; /* Menyederhanakan navbar mobile untuk pemula */
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .about-img-box img {
+        height: 300px;
+    }
+    .quote-item p {
+        font-size: 1.4rem;
+    }
+    .gallery-grid {
+        grid-auto-rows: 200px;
+    }
+    .gallery-item.long {
+        grid-row: span 1;
+    }
+}
