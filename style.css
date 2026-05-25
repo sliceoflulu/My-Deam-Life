@@ -124,15 +124,14 @@ h2 {
 }
 .about-img-box img {
     width: 100%;
-    max-width: 300px;         /* Mengatur lebar maksimal pasfoto agar tidak terlalu raksasa */
-    height: auto;             /* Membiarkan tinggi menyesuaikan secara otomatis */
-    aspect-ratio: 3 / 4;      /* Mengunci rasio foto tepat 3x4 */
-    object-fit: contain;      /* Menjamin seluruh area foto masuk tanpa terpotong sama sekali */
-    background-color: #fff;   /* Memberikan background putih jika ada sisa ruang */
-    border-radius: 15px;      /* Lengkungan sudut yang lebih rapi untuk pasfoto */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    max-width: 240px;         /* Diperkecil sedikit agar pas dan estetik di layar HP */
+    height: auto;             /* Tinggi otomatis mengikuti proporsi asli gambar */
+    aspect-ratio: 3 / 4;      /* Mengunci rasio pasfoto */
+    object-fit: cover;        /* Mengisi ruang dengan sempurna tanpa bikin foto melar/gemuk */
+    border-radius: 12px;      /* Lengkungan sudut yang lebih tipis dan rapi */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     display: block;
-    margin: 0 auto;           /* Membuat posisi foto otomatis di tengah pada layar kecil */
+    margin: 0 auto;           /* Memastikan foto selalu berada tepat di tengah layar HP */
 }
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
